@@ -18,7 +18,6 @@ class PriorityQueue:
         # updates the key of a node given by data
         node_index = self.heap.find(data)
         if node_index < 0:
-            print("node not found")
             return -1
         self.heap.nodes[node_index].key = new_key
         self.heap.heapify(0)
@@ -33,7 +32,6 @@ class PriorityQueue:
         # removes a node given by data
         node_index = self.heap.find(data)
         if node_index < 0:
-            print("node not found")
             return -1
         
         self.heap.nodes[node_index] = self.heap.nodes[-1]
